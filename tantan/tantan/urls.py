@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from user import api
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^api/user/submit/phone/$',api.submit_phone),
+    url(r'^api/user/submit/vcode/$',api.submit_vcode),
 ]
